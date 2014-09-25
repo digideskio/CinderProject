@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="frr-5u-W37" id="4zk-ie-iZJ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="frr-5u-W37" customClass="CinderProjectDelegate">
+            <connections>
+                <outlet property="cinderView" destination="Pz7-cS-8b3" id="zfz-6X-fO5"/>
+                <outlet property="settingsHeightConstraint" destination="vQf-Fk-jjM" id="NNV-dL-9rl"/>
+                <outlet property="showSettings" destination="j7U-5L-28T" id="k9a-eb-aQd"/>
+                <outlet property="window" destination="i6W-U8-mGF" id="CPr-CF-lhQ"/>
+            </connections>
+        </customObject>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="NewApplication" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="NewApplication" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About NewApplication" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide NewApplication" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit NewApplication" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="H8h-7b-M4v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="View" id="HyV-fh-RgO">
+                        <items>
+                            <menuItem title="Show Settings" keyEquivalent="s" id="j7U-5L-28T">
+                                <connections>
+                                    <action selector="showSettings:" target="frr-5u-W37" id="wDf-Ol-aZB"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Help" id="wpr-3q-Mcd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="i6W-U8-mGF">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="159" width="480" height="400"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="yLZ-nx-jLb">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-CZ-x8X">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hVJ-QP-Uhj">
+                                <rect key="frame" x="18" y="20" width="370" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="VI6-jP-HO0"/>
+                                </constraints>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="amb-TT-j1U"/>
+                                <connections>
+                                    <action selector="subdivisionSliderChanged:" target="frr-5u-W37" id="30N-QR-zIn"/>
+                                </connections>
+                            </slider>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="8aj-zg-Qiw">
+                                <rect key="frame" x="416" y="19" width="44" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="0VN-oc-NEz"/>
+                                    <constraint firstAttribute="width" constant="44" id="EQR-7K-fWn"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="colorChanged:" target="frr-5u-W37" id="PQB-eM-sMu"/>
+                                </connections>
+                            </colorWell>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8aj-zg-Qiw" secondAttribute="trailing" constant="20" id="3qR-OZ-1vw"/>
+                            <constraint firstItem="hVJ-QP-Uhj" firstAttribute="leading" secondItem="5Yw-CZ-x8X" secondAttribute="leading" constant="20" id="J1Q-OT-7mk"/>
+                            <constraint firstItem="8aj-zg-Qiw" firstAttribute="top" secondItem="5Yw-CZ-x8X" secondAttribute="top" constant="18" id="aTB-HS-BIe"/>
+                            <constraint firstItem="8aj-zg-Qiw" firstAttribute="leading" secondItem="hVJ-QP-Uhj" secondAttribute="trailing" constant="30" id="gmH-e9-6M0"/>
+                            <constraint firstItem="hVJ-QP-Uhj" firstAttribute="top" secondItem="5Yw-CZ-x8X" secondAttribute="top" constant="22" id="hv6-Wv-Rve"/>
+                            <constraint firstAttribute="height" constant="60" id="vQf-Fk-jjM"/>
+                        </constraints>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-cS-8b3" customClass="CinderView">
+                        <rect key="frame" x="0.0" y="60" width="480" height="340"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="5Yw-CZ-x8X" secondAttribute="trailing" id="86T-rw-stW"/>
+                    <constraint firstItem="5Yw-CZ-x8X" firstAttribute="leading" secondItem="yLZ-nx-jLb" secondAttribute="leading" id="HSA-Ba-ya9"/>
+                    <constraint firstAttribute="trailing" secondItem="Pz7-cS-8b3" secondAttribute="trailing" id="J4H-1r-ofL"/>
+                    <constraint firstAttribute="bottom" secondItem="5Yw-CZ-x8X" secondAttribute="bottom" id="Riw-HD-fx7"/>
+                    <constraint firstItem="Pz7-cS-8b3" firstAttribute="top" secondItem="yLZ-nx-jLb" secondAttribute="top" id="Wze-FX-Lzg"/>
+                    <constraint firstItem="Pz7-cS-8b3" firstAttribute="leading" secondItem="yLZ-nx-jLb" secondAttribute="leading" id="jil-yf-r6f"/>
+                    <constraint firstItem="5Yw-CZ-x8X" firstAttribute="top" secondItem="Pz7-cS-8b3" secondAttribute="bottom" id="qTn-Wo-Ilt"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="344" y="273"/>
+        </window>
+    </objects>
+</document>
